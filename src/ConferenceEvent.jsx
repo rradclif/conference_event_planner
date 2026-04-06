@@ -71,6 +71,8 @@ const ConferenceEvent = () => {
           }
         }
       }
+    const avTotalCost = calculateTotalCost("av");
+
 
     return (
         <>
@@ -175,8 +177,11 @@ const ConferenceEvent = () => {
 			                                <span className="quantity-value">{item.quantity}</span>
 			                                <button className=" btn-success" onClick={() => handleIncrementAvQuantity(index)}> &#43; </button>
 		                                </div>
+                                        
 	                                </div>
                                     ))}
+                                    <div className="total_cost">Total Cost: {avTotalCost}</div>
+
 
                                 </div>
                                 <div className="total_cost">Total Cost:</div>
